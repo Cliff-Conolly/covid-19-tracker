@@ -8,6 +8,11 @@ import { fetchData } from './API/api'
 
 class App extends React.Component {
 
+  // The data will be an empty object until it is populated via the fetchData() function below
+  state ={
+    data:{},
+  }
+
   async componentDidMount() {
     const data = await fetchData();
 
