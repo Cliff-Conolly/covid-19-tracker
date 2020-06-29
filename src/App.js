@@ -22,9 +22,12 @@ class App extends React.Component {
   }
 
   render() {
+    // Destructure the data, put it inside a variable and take data outside of 'this.state'
+    const { data } = this.state
     return (
       <div className={styles.container}>
-        <Cards />
+        {/*Pass the data as props to card component*/}
+        <Cards data={this.state.data}/>
         <Chart />
         <CountryPicker />
       </div>
